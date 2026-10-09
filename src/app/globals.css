@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f3f4;
+  --bg-terminal: #1e293b;
+  --border-subtle: #e8eaed;
+  --border-accent: #dadce0;
+  --border-glow: rgba(26, 115, 232, 0.2);
+
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --text-muted: #80868b;
+  --text-highlight: #1a73e8;
+
+  --p1-color: #c5221f;
+  --p1-bg: #fce8e6;
+  --p1-border: #fad2cf;
+  --p1-glow: rgba(197, 34, 31, 0.2);
+
+  --p2-color: #c26401;
+  --p2-bg: #feefe3;
+  --p2-border: #fedfc8;
+
+  --p3-color: #b06000;
+  --p3-bg: #fef7e0;
+  --p3-border: #fce8b2;
+
+  --p4-color: #1a73e8;
+  --p4-bg: #e8f0fe;
+  --p4-border: #d2e3fc;
+
+  --brand-cyan: #1a73e8;
+  --brand-blue: #1a73e8;
+  --brand-emerald: #1e8e3e;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Google Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', 'Roboto Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: none;
+}
+
+/* Custom Scrollbars - Google Style */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bdc1c6;
+}
+
+/* Card and Panel Utilities */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid var(--border-accent);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.12), 0 1px 2px rgba(60, 64, 67, 0.08);
+}
+
+.glass-panel-subtle {
+  background: #f8f9fa;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(197, 34, 31, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(197, 34, 31, 0.4);
+  }
+}
+
+@keyframes pulseLive {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+.animate-live-dot {
+  animation: pulseLive 1.8s infinite ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fadeInSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Monospace Code styling */
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Badges - Google Material Palette */
+.badge-p1 {
+  background: var(--p1-bg);
+  color: var(--p1-color);
+  border: 1px solid var(--p1-border);
+}
+
+.badge-p2 {
+  background: var(--p2-bg);
+  color: var(--p2-color);
+  border: 1px solid var(--p2-border);
+}
+
+.badge-p3 {
+  background: var(--p3-bg);
+  color: var(--p3-color);
+  border: 1px solid var(--p3-border);
+}
+
+.badge-p4 {
+  background: var(--p4-bg);
+  color: var(--p4-color);
+  border: 1px solid var(--p4-border);
+}
+
+/* Google-style subtle glow */
+.glow-cyan {
+  color: #1a73e8;
+}
+
+/* Button Reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

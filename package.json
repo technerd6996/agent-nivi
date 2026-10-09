@@ -1,0 +1,29 @@
+{
+  "name": "it-triage-agent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test tests",
+    "run:embed": "node scripts/run-embedding.mjs",
+    "ingest": "node scripts/ingest-runbook.mjs",
+    "test:retrieval": "node scripts/test-retrieval.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
+    "@supabase/supabase-js": "^2.109.0",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "puppeteer-core": "^25.12.0",
+    "typescript": "^5.7.0"
+  }
+}
